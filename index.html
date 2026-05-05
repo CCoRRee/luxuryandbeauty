@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Site informativo sobre cosméticos femininos de luxo: marcas, categorias, dicas de compra e cuidados."
+    />
+    <title>Cosméticos Femininos de Luxo | Guia Informativo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span class="brand-name">LuxBeauty</span>
+        </div>
+
+        <nav class="nav" aria-label="Navegação principal">
+          <a href="#marcas">Marcas</a>
+          <a href="#categorias">Categorias</a>
+          <a href="#guia">Guia de compra</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+          <button id="themeToggle" class="btn btn-ghost" type="button" aria-pressed="false">
+            <span class="btn-icon" aria-hidden="true">◐</span>
+            <span class="btn-text">Tema</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Guia informativo</p>
+            <h1>Produtos cosméticos femininos de luxo</h1>
+            <p class="lead">
+              Conheça marcas icônicas, linhas populares e boas práticas para comprar com segurança.
+              Feito para uso acadêmico — sem afiliação oficial com as marcas citadas.
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#marcas">Explorar marcas</a>
+              <a class="btn btn-ghost" href="#guia">Ver dicas de compra</a>
+            </div>
+
+            <dl class="hero-stats" aria-label="Resumo rápido">
+              <div class="stat">
+                <dt>Marcas em destaque</dt>
+                <dd>9</dd>
+              </div>
+              <div class="stat">
+                <dt>Foco</dt>
+                <dd>Maquiagem, perfumes e skincare</dd>
+              </div>
+              <div class="stat">
+                <dt>Nível</dt>
+                <dd>Luxo & premium</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="hero-panel" aria-hidden="true">
+            <div class="panel-card">
+              <div class="panel-top">
+                <span class="pill">Destaque</span>
+                <span class="pill pill-outline">Curadoria</span>
+              </div>
+              <h2 class="panel-title">O que define “luxo” em cosméticos?</h2>
+              <ul class="panel-list">
+                <li>Pesquisa e ingredientes de alta performance</li>
+                <li>Embalagens premium e design de marca</li>
+                <li>Experiência: textura, aroma e acabamento</li>
+                <li>Serviços, personalização e edição limitada</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hero-glow" aria-hidden="true"></div>
+      </section>
+
+      <section id="marcas" class="section">
+        <div class="container section-head">
+          <h2>Marcas de luxo (e linhas premium)</h2>
+          <p class="muted">
+            Pesquise por nome e descubra os diferenciais. Clique em “Detalhes” para ver categorias, destaques e dicas.
+          </p>
+
+          <div class="controls">
+            <label class="field">
+              <span class="field-label">Buscar</span>
+              <input
+                id="brandSearch"
+                type="search"
+                inputmode="search"
+                placeholder="Ex.: Dior, Chanel, Fenty…"
+                autocomplete="off"
+              />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Categoria</span>
+              <select id="categoryFilter">
+                <option value="todas">Todas</option>
+                <option value="maquiagem">Maquiagem</option>
+                <option value="fragrancias">Fragrâncias</option>
+                <option value="skincare">Skincare</option>
+                <option value="corpo">Corpo & banho</option>
+              </select>
+            </label>
+
+            <div class="results" aria-live="polite">
+              <span id="resultsCount">9</span> resultados
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div id="brandGrid" class="grid">
+            <article class="card" data-name="Fenty Beauty" data-tags="maquiagem">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/fenty-beauty.png"
+                  data-fallback="assets/brand-fenty.svg"
+                  data-fallback-alt="Ilustração de maquiagem (Fenty Beauty)."
+                  alt="Logo da Fenty Beauty."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Fenty Beauty</h3>
+                <p class="tagline">Inclusão de tons e acabamentos modernos.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Maquiagem</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    Marca conhecida por ampliar a oferta de tons e por fórmulas com foco em performance para diferentes tipos
+                    de pele.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> bases/corretivos, iluminadores, gloss, bronzers.</li>
+                    <li><strong>Para quem:</strong> quem busca variedade de tons e acabamento “skin-like”.</li>
+                    <li><strong>Dica:</strong> teste subtom (frio/neutro/quente) e acabamento (matte/soft glow).</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card" data-name="Dolce & Gabbana" data-tags="maquiagem fragrancias">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/dolce-gabbana.png"
+                  data-fallback="assets/brand-dolce-gabbana.svg"
+                  data-fallback-alt="Ilustração de batom e perfume (Dolce &amp; Gabbana)."
+                  alt="Logo da Dolce &amp; Gabbana."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Dolce &amp; Gabbana Beauty</h3>
+                <p class="tagline">Estética italiana, luxo sensorial e fragrâncias marcantes.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Maquiagem</li>
+                <li>Fragrâncias</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    Linhas que combinam design sofisticado, cores intensas e perfumes com assinatura clássica e contemporânea.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> batons, bases, blushes; perfumes florais e orientais.</li>
+                    <li><strong>Para quem:</strong> quem gosta de presença e acabamento elegante.</li>
+                    <li><strong>Dica:</strong> em perfumes, experimente na pele e reavalie após 2–3 horas (fixação muda).</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card" data-name="Chanel" data-tags="maquiagem fragrancias skincare">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/chanel.png"
+                  data-fallback="assets/brand-chanel.svg"
+                  data-fallback-alt="Ilustração de perfume e skincare (Chanel)."
+                  alt="Logo da Chanel."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Chanel (Coco Chanel)</h3>
+                <p class="tagline">Clássicos atemporais e acabamento refinado.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Maquiagem</li>
+                <li>Fragrâncias</li>
+                <li>Skincare</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    Ícone do luxo francês, com foco em elegância discreta: fragrâncias históricas, maquiagem de acabamento
+                    polido e skincare premium.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> perfumes clássicos, batons, pós/iluminadores, cuidados anti-idade.</li>
+                    <li><strong>Para quem:</strong> fãs de estética clean e produtos “assinatura”.</li>
+                    <li><strong>Dica:</strong> em maquiagem, compare tons sob luz natural para evitar “cinza” ou “alaranjado”.</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card" data-name="Prada" data-tags="maquiagem fragrancias">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/prada.png"
+                  data-fallback="assets/brand-prada.svg"
+                  data-fallback-alt="Ilustração minimalista de batom (Prada)."
+                  alt="Logo da Prada."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Prada</h3>
+                <p class="tagline">Minimalismo de luxo com pegada contemporânea.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Maquiagem</li>
+                <li>Fragrâncias</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    O universo Prada valoriza design, inovação e identidade. Em beleza, costuma focar em estética editorial e
+                    sensorial sofisticado.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> maquiagem com embalagens premium; fragrâncias com assinatura moderna.</li>
+                    <li><strong>Para quem:</strong> quem gosta de luxo discreto e “statement pieces”.</li>
+                    <li><strong>Dica:</strong> priorize acabamentos que combinem com sua rotina (durabilidade x conforto).</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card" data-name="Victoria's Secret" data-tags="fragrancias corpo">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/victorias-secret.png"
+                  data-fallback="assets/brand-victorias-secret.svg"
+                  data-fallback-alt="Ilustração de body mist e loção (Victoria’s Secret)."
+                  alt="Logo da Victoria’s Secret."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Victoria’s Secret</h3>
+                <p class="tagline">Body mists, loções e fragrâncias fáceis de usar.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Fragrâncias</li>
+                <li>Corpo &amp; banho</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    Popular por body mists e hidratantes perfumados, com foco em camadas (layering) e perfumação no dia a
+                    dia.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> mists, loções, body oils e kits presenteáveis.</li>
+                    <li><strong>Para quem:</strong> quem gosta de perfumes leves e “cheirosos” para reaplicar.</li>
+                    <li><strong>Dica:</strong> combine loção + mist da mesma família para aumentar projeção e duração.</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card" data-name="Christian Louboutin" data-tags="maquiagem fragrancias">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/christian-louboutin.png"
+                  data-fallback="assets/brand-louboutin.svg"
+                  data-fallback-alt="Ilustração de salto alto e batom (Christian Louboutin Beauty)."
+                  alt="Logo da Christian Louboutin."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Christian Louboutin Beauty</h3>
+                <p class="tagline">Objetos de desejo: design artístico e acabamento luxuoso.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Maquiagem</li>
+                <li>Fragrâncias</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    Conhecida por embalagens escultóricas e edição limitada. Costuma atrair quem valoriza colecionáveis e
+                    presença no nécessaire.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> batons, esmaltes e fragrâncias em frascos premium.</li>
+                    <li><strong>Para quem:</strong> quem quer itens marcantes e presenteáveis.</li>
+                    <li><strong>Dica:</strong> avalie reposição/refil e custo por uso, especialmente em colecionáveis.</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card" data-name="Dior" data-tags="maquiagem fragrancias skincare">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/dior.png"
+                  data-fallback="assets/brand-dior.svg"
+                  data-fallback-alt="Ilustração de paleta e perfume (Dior)."
+                  alt="Logo da Dior."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Dior</h3>
+                <p class="tagline">Alta costura traduzida em beleza: maquiagem, perfumes e skincare.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Maquiagem</li>
+                <li>Fragrâncias</li>
+                <li>Skincare</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    Forte em maquiagem de acabamento sofisticado e em fragrâncias populares. No skincare, foca em linhas
+                    de cuidado e tratamento premium.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> bases, batons, paletas; perfumes clássicos; séruns e cremes.</li>
+                    <li><strong>Para quem:</strong> quem quer “glamour” com performance consistente.</li>
+                    <li><strong>Dica:</strong> em base, verifique oxidação (mudança de cor) após 10–15 minutos.</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card" data-name="Louis Vuitton" data-tags="fragrancias">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/louis-vuitton.png"
+                  data-fallback="assets/brand-louis-vuitton.svg"
+                  data-fallback-alt="Ilustração de frasco de perfume (Louis Vuitton)."
+                  alt="Logo da Louis Vuitton."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Louis Vuitton</h3>
+                <p class="tagline">Fragrâncias de luxo com foco em matérias-primas e experiência.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Fragrâncias</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    A marca costuma priorizar perfumes com narrativa e construção olfativa elaborada, além de frascos e
+                    apresentação premium.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> eaux de parfum e coleções com variações florais, amadeiradas e frescas.</li>
+                    <li><strong>Para quem:</strong> quem valoriza assinatura olfativa e experiência de compra.</li>
+                    <li><strong>Dica:</strong> escolha por família olfativa (cítrica, floral, amadeirada, gourmand).</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+
+            <article class="card" data-name="Bottega Veneta" data-tags="fragrancias">
+              <div class="card-media">
+                <img
+                  class="brand-image"
+                  src="assets/logos/bottega-veneta.png"
+                  data-fallback="assets/brand-bottega-veneta.svg"
+                  data-fallback-alt="Ilustração de perfume com textura trançada (Bottega Veneta)."
+                  alt="Logo da Bottega Veneta."
+                  loading="lazy"
+                  width="1200"
+                  height="800"
+                />
+              </div>
+              <header class="card-head">
+                <h3>Bottega Veneta</h3>
+                <p class="tagline">Sofisticação discreta e identidade olfativa elegante.</p>
+              </header>
+              <ul class="chips" aria-label="Categorias">
+                <li>Fragrâncias</li>
+              </ul>
+              <details class="details">
+                <summary>Detalhes</summary>
+                <div class="details-body">
+                  <p>
+                    Associada ao “quiet luxury”, tende a apostar em perfumes com personalidade e acabamento refinado, bons
+                    para uso cotidiano elegante.
+                  </p>
+                  <ul class="bullets">
+                    <li><strong>Destaques:</strong> perfumes com pegada sofisticada, normalmente amadeirada/floral.</li>
+                    <li><strong>Para quem:</strong> quem prefere fragrâncias menos óbvias e mais “chiques”.</li>
+                    <li><strong>Dica:</strong> considere versões menores/decants para testar antes do frasco grande.</li>
+                  </ul>
+                </div>
+              </details>
+            </article>
+          </div>
+
+          <div id="emptyState" class="empty" hidden>
+            <h3>Nenhuma marca encontrada</h3>
+            <p class="muted">Tente remover filtros ou pesquisar por outro termo.</p>
+            <button id="resetFilters" class="btn btn-primary" type="button">Limpar filtros</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="categorias" class="section section-alt">
+        <div class="container section-head">
+          <h2>Categorias principais</h2>
+          <p class="muted">
+            Use as categorias para entender o que comprar primeiro e como montar um kit coerente com seu estilo.
+          </p>
+        </div>
+
+        <div class="container columns">
+          <article class="feature">
+            <div class="feature-media">
+              <img
+                src="assets/topic-maquiagem.svg"
+                alt="Ilustração: maquiagem."
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </div>
+            <h3>Maquiagem</h3>
+            <p>
+              Base, corretivo, pó, blush, bronzer, sombras e batom. No luxo, costuma haver foco em textura, pigmentação e
+              acabamento.
+            </p>
+            <ul class="bullets">
+              <li><strong>Critérios:</strong> durabilidade, conforto, cobertura e subtom.</li>
+              <li><strong>Dica:</strong> “menos é mais”: invista em itens coringa e monte aos poucos.</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <div class="feature-media">
+              <img
+                src="assets/topic-fragrancias.svg"
+                alt="Ilustração: fragrâncias."
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </div>
+            <h3>Fragrâncias</h3>
+            <p>
+              Perfumes e body mists variam por família olfativa e performance. Luxo pode trazer matérias-primas e
+              construções mais complexas.
+            </p>
+            <ul class="bullets">
+              <li><strong>Critérios:</strong> projeção, fixação, ocasião e clima.</li>
+              <li><strong>Dica:</strong> teste na pele e evite decidir só na fita olfativa.</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <div class="feature-media">
+              <img
+                src="assets/topic-skincare.svg"
+                alt="Ilustração: skincare."
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </div>
+            <h3>Skincare</h3>
+            <p>
+              Limpeza, hidratação, proteção solar e tratamento (vitamina C, retinoides, ácidos). Luxo pode somar
+              sensorial, embalagem e ativos.
+            </p>
+            <ul class="bullets">
+              <li><strong>Critérios:</strong> tipo de pele, tolerância e constância de uso.</li>
+              <li><strong>Dica:</strong> simplifique: rotina básica bem feita vale mais que excesso.</li>
+            </ul>
+          </article>
+
+          <article class="feature">
+            <div class="feature-media">
+              <img
+                src="assets/topic-corpo.svg"
+                alt="Ilustração: corpo e banho."
+                loading="lazy"
+                width="1200"
+                height="800"
+              />
+            </div>
+            <h3>Corpo &amp; banho</h3>
+            <p>
+              Hidratantes, óleos, esfoliantes e sabonetes premium. Ótimo para presentear e para complementar fragrâncias
+              (layering).
+            </p>
+            <ul class="bullets">
+              <li><strong>Critérios:</strong> textura, perfume, absorção e sensibilidade.</li>
+              <li><strong>Dica:</strong> evite esfoliação excessiva e prefira hidratação diária.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="guia" class="section">
+        <div class="container section-head">
+          <h2>Guia de compra segura</h2>
+          <p class="muted">
+            Cosméticos de luxo costumam ser alvo de falsificações. Use este checklist para reduzir riscos.
+          </p>
+        </div>
+
+        <div class="container split">
+          <div class="callout">
+            <h3>Checklist rápido</h3>
+            <ol class="checklist">
+              <li>Prefira lojas oficiais, autorizadas ou marketplaces com verificação.</li>
+              <li>Desconfie de preço “bom demais” e promoções sem histórico.</li>
+              <li>Confira lote/validade, lacre, impressão e qualidade do frasco/estojo.</li>
+              <li>Leia política de troca e devolução antes de comprar.</li>
+              <li>Guarde nota fiscal e registro do pedido.</li>
+            </ol>
+          </div>
+
+          <div class="callout callout-alt">
+            <h3>Montando um kit inteligente</h3>
+            <p>
+              Se o orçamento é limitado, priorize itens de maior uso e maior impacto no resultado final:
+            </p>
+            <ul class="bullets">
+              <li><strong>1º</strong> base/corretivo ou um batom assinatura.</li>
+              <li><strong>2º</strong> um perfume versátil (dia/noite).</li>
+              <li><strong>3º</strong> skincare básico (limpador + hidratante + protetor solar).</li>
+              <li><strong>4º</strong> extras: paleta, iluminador, edições limitadas.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-alt">
+        <div class="container section-head">
+          <h2>Perguntas frequentes</h2>
+          <p class="muted">Respostas rápidas para dúvidas comuns sobre cosméticos de luxo.</p>
+        </div>
+
+        <div class="container faq">
+          <details class="details">
+            <summary>Luxo é sempre melhor que um produto mais barato?</summary>
+            <div class="details-body">
+              <p>
+                Nem sempre. O luxo pode entregar sensorial, embalagem, status e algumas fórmulas excelentes — mas o “melhor”
+                depende do seu tipo de pele, preferências e constância de uso.
+              </p>
+            </div>
+          </details>
+
+          <details class="details">
+            <summary>Como escolher o tom certo de base?</summary>
+            <div class="details-body">
+              <p>
+                Teste no maxilar/pescoço sob luz natural, observe subtom (frio, neutro, quente) e aguarde alguns minutos
+                para ver se oxida (escurece/alaranja).
+              </p>
+            </div>
+          </details>
+
+          <details class="details">
+            <summary>Qual a forma correta de testar perfumes?</summary>
+            <div class="details-body">
+              <p>
+                Aplique na pele, espere a evolução (saída → coração → fundo) e reavalie após 2–3 horas. Evite esfregar o
+                pulso, pois altera a percepção das notas.
+              </p>
+            </div>
+          </details>
+
+          <details class="details">
+            <summary>Quanto tempo dura um cosmético aberto?</summary>
+            <div class="details-body">
+              <p>
+                Depende do símbolo PAO (ex.: 6M, 12M). Cheiro estranho, mudança de cor/textura ou irritação são sinais para
+                descartar.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="contato" class="section">
+        <div class="container section-head">
+          <h2>Contato</h2>
+          <p class="muted">Envie uma mensagem (formulário demonstrativo — não envia para servidor).</p>
+        </div>
+
+        <div class="container contact">
+          <form id="contactForm" class="form" novalidate>
+            <label class="field">
+              <span class="field-label">Nome</span>
+              <input name="nome" required minlength="2" placeholder="Seu nome" />
+            </label>
+
+            <label class="field">
+              <span class="field-label">Email</span>
+              <input name="email" type="email" required placeholder="voce@exemplo.com" />
+            </label>
+
+            <label class="field field-full">
+              <span class="field-label">Mensagem</span>
+              <textarea name="mensagem" rows="5" required minlength="10" placeholder="Escreva sua mensagem..."></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+              <button class="btn btn-ghost" type="reset">Limpar</button>
+            </div>
+
+            <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+          </form>
+
+          <aside class="aside">
+            <h3>Observação</h3>
+            <p class="muted">
+              Este site é um projeto informativo/educacional. Marcas e nomes citados pertencem aos seus respectivos
+              proprietários.
+            </p>
+            <div class="mini">
+              <p class="mini-title">Atalhos</p>
+              <div class="mini-links">
+                <a href="#marcas">Marcas</a>
+                <a href="#guia">Guia</a>
+                <a href="#faq">FAQ</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="muted">© <span id="year"></span> LuxBeauty — projeto acadêmico.</p>
+        <button id="toTop" class="btn btn-ghost" type="button">Voltar ao topo</button>
+      </div>
+    </footer>
+  </body>
+</html>
